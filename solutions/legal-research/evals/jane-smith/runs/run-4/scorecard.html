@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Score: Legal Research - Jane Smith</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #1a1a1a; max-width: 1100px; margin: 40px auto; padding: 0 32px; background: #fff; }
+  h1 { font-size: 20px; color: #1a1a1a; margin-bottom: 4px; }
+  h2 { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-top: 32px; margin-bottom: 10px; border-bottom: 1px solid #d0d0d0; padding-bottom: 4px; }
+  .score-banner { background: #fef2f2; border: 1.5px solid #dc2626; border-radius: 6px; padding: 6px 14px; display: inline-block; margin-bottom: 16px; }
+  .score-banner .score { font-size: 16px; font-weight: 700; color: #dc2626; }
+  .score-banner.pass { background: #f0fdf4; border-color: #16a34a; }
+  .score-banner.pass .score { color: #16a34a; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 8px; }
+  th { background: #1e3a5f; color: #fff; text-align: left; padding: 7px 10px; font-weight: 600; font-size: 11px; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.5; }
+  tr:nth-child(even) td { background: #f8f9fb; }
+  .footnote { font-size: 11px; color: #666; margin-top: 6px; font-style: italic; }
+  .grade-poor { color: #d97706; font-weight: 600; }
+  .grade-fair { color: #2563eb; font-weight: 600; }
+  .grade-fail { color: #dc2626; font-weight: 600; }
+  .grade-pass { color: #16a34a; font-weight: 600; }
+  .summary-list { list-style: disc; padding-left: 20px; margin: 0; }
+  .summary-list li { margin-bottom: 10px; line-height: 1.6; }
+  .deviation-list { list-style: disc; padding-left: 20px; margin: 0; }
+  .deviation-list li { margin-bottom: 10px; line-height: 1.6; }
+  .tag-miss { background: #fef2f2; color: #dc2626; border-radius: 3px; padding: 1px 5px; font-size: 11px; font-weight: 600; }
+  .tag-new { background: #eff6ff; color: #2563eb; border-radius: 3px; padding: 1px 5px; font-size: 11px; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>QA Score: Legal Research - Magazine, Inc. v. Jane Smith (2025) (Run 4 &mdash; 2026-03-31)</h1>
+
+<div class="score-banner pass">
+  <div class="score">91 / 100 &mdash; PASS</div>
+</div>
+
+<h2>Run Log</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Step</th><th>Action</th><th>Observed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Intake</td><td>Selected &ldquo;Jane Smith&rdquo; from example dropdown</td><td>Title: Magazine, Inc. v. Jane Smith (2025); Jurisdiction: California; Representing: Defendant; Fact Pattern: 811 chars auto-populated</td></tr>
+    <tr><td>Follow-up Questions</td><td>Accepted all defaults (Include), clicked Continue</td><td>5 questions generated; all set to Include; no answers entered</td></tr>
+    <tr><td>Confirmation Modal</td><td>Clicked &ldquo;Yes&rdquo; to continue without answering</td><td>Modal appeared and dismissed successfully</td></tr>
+    <tr><td>Areas of Law</td><td>Accepted all defaults; Litigation Stage left at default</td><td>3 areas present: Telecom/Media/Entertainment, Intellectual Property Law, Personal Injury and Tort Law; Litigation Stage: State Trial Court</td></tr>
+    <tr><td>Legal Authorities</td><td>Clicked each cause in sidebar to mark reviewed</td><td>3/3 reviewed: Copyright Infringement (Federal), Unfair Competition (State&ndash;CA), Defamation (State&ndash;CA)</td></tr>
+    <tr><td>Legal Questions</td><td>Clicked each cause; verified checkboxes selected</td><td>3/3 selected; 2 questions per cause (6 total); all auto-selected</td></tr>
+    <tr><td>Cases</td><td>Clicked each cause in sidebar to mark reviewed</td><td>3/3 reviewed; cases loaded per cause (9 / 5 / 3 cases per cause)</td></tr>
+    <tr><td>Mapping &amp; Analysis</td><td>Clicked Continue to Analysis</td><td>10 holdings mapped across 3 causes; Campbell and Harper &amp; Row visible in copyright mapping</td></tr>
+    <tr><td>Results &amp; Analysis</td><td>Waited for &ldquo;Temporary&rdquo; tag to clear before proceeding</td><td>Analysis generated; all 3 causes covered; correct defendant perspective maintained</td></tr>
+    <tr><td>Document Generation</td><td>Next Steps &rarr; Legal Brief &rarr; Persuasive Analysis &rarr; Generate without uploading a complaint</td><td>.docx downloaded; saved to runs/run-4/legal-brief.docx (6,941 words)</td></tr>
+  </tbody>
+</table>
+
+<h2>Score Breakdown</h2>
+<p style="font-size:12px; color:#444; margin-bottom:10px;">
+  Scored out of <strong>100 points</strong> across 7 categories: 25 structural, 75 substantive. Passing threshold: 70.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Score</th>
+      <th>Max</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Flow Completion</td><td>10</td><td>10</td><td><span class="grade-pass">PASS</span></td></tr>
+    <tr><td>Document Structure</td><td>10</td><td>10</td><td><span class="grade-pass">PASS</span></td></tr>
+    <tr><td>Completeness</td><td>5</td><td>5</td><td><span class="grade-pass">PASS</span></td></tr>
+    <tr><td>Results Page Coverage</td><td>15</td><td>15</td><td><span class="grade-pass">PASS</span></td></tr>
+    <tr><td>Legal Argument Coverage</td><td>20</td><td>20</td><td><span class="grade-pass">PASS</span></td></tr>
+    <tr><td>Case Citations</td><td>8</td><td>10</td><td><span class="grade-fair">FAIR</span></td></tr>
+    <tr><td>Analytical Quality</td><td>23</td><td>30</td><td><span class="grade-fair">FAIR</span></td></tr>
+    <tr style="font-weight:700;"><td>Total</td><td>91</td><td>100</td><td><span class="grade-pass">PASS</span></td></tr>
+  </tbody>
+</table>
+
+<h2>Results Summary</h2>
+<ul class="summary-list">
+  <li><strong>Flow Completion (10/10 &mdash; PASS):</strong> All build outline steps completed end-to-end without human intervention. Every gate (Legal Authorities 3/3, Legal Questions 3/3, Cases 3/3) passed and the .docx downloaded successfully.</li>
+  <li><strong>Document Structure (10/10 &mdash; PASS):</strong> All 12 required sections present in correct order, from Legal Advisory &amp; Disclaimer through Certificates of Compliance and Service. Court header reads &ldquo;United States District Court [________] District of California&rdquo; &mdash; California referenced correctly.</li>
+  <li><strong>Completeness (5/5 &mdash; PASS):</strong> Word count of 6,941 falls within the expected 5,000&ndash;9,000 range. Parties correctly identified throughout. Conclusion requests judgment in favor of Ms. Smith (Defendant).</li>
+  <li><strong>Results Page Coverage (15/15 &mdash; PASS):</strong> All 3 expected areas of law present. All required causes of action appear with correct jurisdiction labels: Copyright Infringement (Federal), Unfair Competition (State&ndash;CA), Defamation (State&ndash;CA). Relevant cases loaded per cause.</li>
+  <li><strong>Legal Argument Coverage (20/20 &mdash; PASS):</strong> All 6 required argument topics are substantively addressed: Fair Use (&sect;107 four-factor analysis), Defamation/No False Statement (&sect;45), Libel Per Quod/Special Damages (&sect;45a), UCL Business Act (&sect;17200), UCL Standing (&sect;17204), and Copyright Damages (&sect;504(b)).</li>
+  <li><strong>Case Citations (8/10 &mdash; FAIR):</strong> All 6 required statutes cited. 3 of 5 must-cite cases present: Campbell v. Acuff-Rose &#10003;, Harper &amp; Row &#10003;, Kasky v. Nike &#10003;. Missing: Milkovich v. Lorain Journal Co. (defamation) and Kwikset Corp. v. Superior Court (UCL standing).</li>
+  <li><strong>Analytical Quality (23/30 &mdash; FAIR):</strong> Most arguments reference case-specific facts (no advertisers, &ldquo;the heart,&rdquo; ruthless criticism, voluntary contributions). The criticism-vs-market-substitution distinction is clearly drawn. Four-factor fair use analysis conducted. The defamation section is the weakest area &mdash; the opinion doctrine is argued without Milkovich, its governing case, and the UCL standing section lacks a case anchor for the &ldquo;lost money or property&rdquo; standard.</li>
+</ul>
+
+<h2>Deviations from Golden Evaluation</h2>
+<ul class="deviation-list">
+  <li><strong>Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990)</strong> <span class="tag-miss">MISSING</span> &mdash; Must-cite case (present in 4/4 prior runs). This is the governing Supreme Court case for the opinion-vs-provably-false-fact framework under the defamation argument. The brief argues the substance correctly using Baker v. L.A. Herald Examiner and Gertz v. Robert Welch, but omitting Milkovich leaves the central framework unanchored.</li>
+  <li><strong>Kwikset Corp. v. Superior Court, 51 Cal. 4th 310 (2011)</strong> <span class="tag-miss">MISSING</span> &mdash; Must-cite when UCL standing argued (present in 2/4 prior runs). The &sect;17204 &ldquo;lost money or property&rdquo; standing requirement is substantively argued but no case is cited to establish the standard. Kwikset is the primary California Supreme Court authority for this requirement.</li>
+</ul>
+
+<h2>New Elements Not in Golden Evaluation</h2>
+<p style="font-size:12px; color:#444; margin-bottom:10px;">
+  Cases present in this run not currently in the golden evaluation. SME should verify accuracy and consider adding if correct.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Case</th><th>Citation</th><th>CourtListener</th><th>Context</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>United Mine Workers v. Gibbs</td><td>383 U.S. 715</td><td><a href="https://www.courtlistener.com/?q=United+Mine+Workers+v+Gibbs+383+US+715&type=o">Search</a></td><td>Supplemental jurisdiction &mdash; Statement of Jurisdiction</td></tr>
+    <tr><td>Calder v. Jones</td><td>465 U.S. 783</td><td><a href="https://www.courtlistener.com/?q=Calder+v+Jones+465+US+783&type=o">Search</a></td><td>Personal jurisdiction (intentional tort targeting California) &mdash; Statement of Jurisdiction</td></tr>
+    <tr><td>Brayton Purcell LLP v. Recordon &amp; Recordon</td><td>606 F.3d 1124</td><td><a href="https://www.courtlistener.com/?q=Brayton+Purcell+v+Recordon+606+F3d+1124&type=o">Search</a></td><td>Personal jurisdiction &mdash; Statement of Jurisdiction</td></tr>
+    <tr><td>Gertz v. Robert Welch, Inc.</td><td>418 U.S. 323</td><td><a href="https://www.courtlistener.com/?q=Gertz+v+Robert+Welch+418+US+323&type=o">Search</a></td><td>Defamation standards &mdash; cited alongside Baker v. L.A. Herald Examiner in the libel argument</td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>

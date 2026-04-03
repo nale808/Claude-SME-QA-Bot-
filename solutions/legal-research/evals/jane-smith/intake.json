@@ -1,0 +1,11 @@
+{
+  "query_name": "Jane Smith",
+  "title": "Magazine, Inc. v. Jane Smith (2025)",
+  "jurisdiction": "California",
+  "representing": "Defendant",
+  "intake_mode": "example-dropdown",
+  "example_dropdown": "jane-smith",
+  "document_style": "Persuasive Analysis",
+  "upload_complaint": false,
+  "build_outline_behavior": "accept-all-defaults"
+}

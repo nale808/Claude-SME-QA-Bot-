@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Score: Legal Research - {{QUERY_NAME}}</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #1a1a1a; max-width: 1100px; margin: 40px auto; padding: 0 32px; background: #fff; }
+  h1 { font-size: 20px; color: #1a1a1a; margin-bottom: 4px; }
+  h2 { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-top: 32px; margin-bottom: 10px; border-bottom: 1px solid #d0d0d0; padding-bottom: 4px; }
+  .score-banner { background: #fef2f2; border: 1.5px solid #dc2626; border-radius: 6px; padding: 6px 14px; display: inline-block; margin-bottom: 16px; }
+  .score-banner .score { font-size: 16px; font-weight: 700; color: #dc2626; }
+  .score-banner.pass { background: #f0fdf4; border-color: #16a34a; }
+  .score-banner.pass .score { color: #16a34a; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 8px; }
+  th { background: #1e3a5f; color: #fff; text-align: left; padding: 7px 10px; font-weight: 600; font-size: 11px; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.5; }
+  tr:nth-child(even) td { background: #f8f9fb; }
+  .footnote { font-size: 11px; color: #666; margin-top: 6px; font-style: italic; }
+  .grade-poor { color: #d97706; font-weight: 600; }
+  .grade-fair { color: #2563eb; font-weight: 600; }
+  .grade-fail { color: #dc2626; font-weight: 600; }
+  .grade-pass { color: #16a34a; font-weight: 600; }
+  .summary-list { list-style: disc; padding-left: 20px; margin: 0; }
+  .summary-list li { margin-bottom: 10px; line-height: 1.6; }
+  .deviation-list { list-style: disc; padding-left: 20px; margin: 0; }
+  .deviation-list li { margin-bottom: 10px; line-height: 1.6; }
+  .tag-miss { background: #fef2f2; color: #dc2626; border-radius: 3px; padding: 1px 5px; font-size: 11px; font-weight: 600; }
+  .tag-new { background: #eff6ff; color: #2563eb; border-radius: 3px; padding: 1px 5px; font-size: 11px; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- Title: "QA Score: Legal Research - [Query Name] (Run N — Date)" -->
+<h1>QA Score: Legal Research - {{QUERY_NAME}} (Run {{RUN_NUMBER}} &mdash; {{DATE}})</h1>
+
+<!-- Score banner: use class="score-banner pass" if total >= 70, else default (red) -->
+<div class="score-banner {{PASS_CLASS}}">
+  <div class="score">{{TOTAL_SCORE}} / 100 &mdash; {{PASS_FAIL}}</div>
+</div>
+
+<h2>Run Log</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Step</th><th>Action</th><th>Observed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- One row per build outline step -->
+    <tr><td>Intake</td><td>{{INTAKE_ACTION}}</td><td>{{INTAKE_OBSERVED}}</td></tr>
+    <tr><td>Follow-up Questions</td><td>{{FUQ_ACTION}}</td><td>{{FUQ_OBSERVED}}</td></tr>
+    <tr><td>Confirmation Modal</td><td>{{MODAL_ACTION}}</td><td>{{MODAL_OBSERVED}}</td></tr>
+    <tr><td>Areas of Law</td><td>{{AOL_ACTION}}</td><td>{{AOL_OBSERVED}}</td></tr>
+    <tr><td>Legal Authorities</td><td>{{LA_ACTION}}</td><td>{{LA_OBSERVED}}</td></tr>
+    <tr><td>Legal Questions</td><td>{{LQ_ACTION}}</td><td>{{LQ_OBSERVED}}</td></tr>
+    <tr><td>Cases</td><td>{{CASES_ACTION}}</td><td>{{CASES_OBSERVED}}</td></tr>
+    <tr><td>Mapping &amp; Analysis</td><td>{{MAP_ACTION}}</td><td>{{MAP_OBSERVED}}</td></tr>
+    <tr><td>Results &amp; Analysis</td><td>{{RES_ACTION}}</td><td>{{RES_OBSERVED}}</td></tr>
+    <tr><td>Document Generation</td><td>{{DOC_ACTION}}</td><td>{{DOC_OBSERVED}}</td></tr>
+  </tbody>
+</table>
+
+<h2>Score Breakdown</h2>
+<p style="font-size:12px; color:#444; margin-bottom:10px;">
+  Scored out of <strong>100 points</strong> across 7 categories: 25 structural, 75 substantive. Passing threshold: 70.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Score</th>
+      <th>Max</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Grade classes: grade-pass, grade-fair, grade-poor, grade-fail -->
+    <tr><td>Flow Completion</td><td>{{FLOW_SCORE}}</td><td>10</td><td><span class="{{FLOW_GRADE_CLASS}}">{{FLOW_GRADE}}</span></td></tr>
+    <tr><td>Document Structure</td><td>{{STRUCT_SCORE}}</td><td>10</td><td><span class="{{STRUCT_GRADE_CLASS}}">{{STRUCT_GRADE}}</span></td></tr>
+    <tr><td>Completeness</td><td>{{COMP_SCORE}}</td><td>5</td><td><span class="{{COMP_GRADE_CLASS}}">{{COMP_GRADE}}</span></td></tr>
+    <tr><td>Results Page Coverage</td><td>{{RPC_SCORE}}</td><td>15</td><td><span class="{{RPC_GRADE_CLASS}}">{{RPC_GRADE}}</span></td></tr>
+    <tr><td>Legal Argument Coverage</td><td>{{LAC_SCORE}}</td><td>20</td><td><span class="{{LAC_GRADE_CLASS}}">{{LAC_GRADE}}</span></td></tr>
+    <tr><td>Case Citations</td><td>{{CIT_SCORE}}</td><td>10</td><td><span class="{{CIT_GRADE_CLASS}}">{{CIT_GRADE}}</span></td></tr>
+    <tr><td>Analytical Quality</td><td>{{AQ_SCORE}}</td><td>30</td><td><span class="{{AQ_GRADE_CLASS}}">{{AQ_GRADE}}</span></td></tr>
+    <tr style="font-weight:700;"><td>Total</td><td>{{TOTAL_SCORE}}</td><td>100</td><td><span class="{{PASS_GRADE_CLASS}}">{{PASS_FAIL}}</span></td></tr>
+  </tbody>
+</table>
+
+<h2>Results Summary</h2>
+<!-- One bullet per category. Format: [Category] ([Score]/[Max] - [Grade]): [1-2 sentence explanation] -->
+<ul class="summary-list">
+  <li><strong>Flow Completion ({{FLOW_SCORE}}/10 &mdash; {{FLOW_GRADE}}):</strong> {{FLOW_SUMMARY}}</li>
+  <li><strong>Document Structure ({{STRUCT_SCORE}}/10 &mdash; {{STRUCT_GRADE}}):</strong> {{STRUCT_SUMMARY}}</li>
+  <li><strong>Completeness ({{COMP_SCORE}}/5 &mdash; {{COMP_GRADE}}):</strong> {{COMP_SUMMARY}}</li>
+  <li><strong>Results Page Coverage ({{RPC_SCORE}}/15 &mdash; {{RPC_GRADE}}):</strong> {{RPC_SUMMARY}}</li>
+  <li><strong>Legal Argument Coverage ({{LAC_SCORE}}/20 &mdash; {{LAC_GRADE}}):</strong> {{LAC_SUMMARY}}</li>
+  <li><strong>Case Citations ({{CIT_SCORE}}/10 &mdash; {{CIT_GRADE}}):</strong> {{CIT_SUMMARY}}</li>
+  <li><strong>Analytical Quality ({{AQ_SCORE}}/30 &mdash; {{AQ_GRADE}}):</strong> {{AQ_SUMMARY}}</li>
+</ul>
+
+<h2>Deviations from Golden Evaluation</h2>
+<!-- One bullet per deviation. Format: [Case/Statute] [MISSING tag] — [explanation] -->
+<ul class="deviation-list">
+  {{DEVIATIONS}}
+</ul>
+
+<h2>New Elements Not in Golden Evaluation</h2>
+<p style="font-size:12px; color:#444; margin-bottom:10px;">
+  Cases, statutes, or arguments present in this run that do not appear in the golden evaluation. SME should verify and consider adding to the golden evaluation if accurate.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Case / Element</th><th>Citation</th><th>CourtListener</th><th>Context</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{NEW_ELEMENTS_ROWS}}
+  </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(git clone:*)",
+      "Read(//c/Users/nicho/.claude/skills/gstack/**)",
+      "Bash(./setup)",
+      "Bash(curl -fsSL https://bun.sh/install)",
+      "Bash(bash)",
+      "Bash(export BUN_INSTALL=\"$HOME/.bun\")",
+      "Bash(export PATH=\"$BUN_INSTALL/bin:$PATH\")",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Bash(where npm:*)",
+      "Bash(where node:*)",
+      "Bash(cmd.exe /c \"where npm\")",
+      "Bash(cmd.exe /c \"where node\")",
+      "Bash(export PATH=\"$PATH:/c/Program Files/nodejs:/c/Users/nicho/AppData/Roaming/npm\")",
+      "Bash(npm --version)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/nicho/AppData/Local/Programs/**)",
+      "Read(//c/Users/nicho/**)",
+      "Bash(export PATH=\"$PATH:/c/Users/nicho/.bun/bin\")",
+      "Bash(bun --version)",
+      "Bash(bun run:*)",
+      "Bash(bun gen.js)",
+      "Bash(bun \"C:/Users/nicho/OneDrive/Nick Work Laptop/Claude-SME-QA-Bot--master/solutions/case-search/evals/smith-v-stellar/runs/run-3/gen-docx.js\")",
+      "Bash(ls -d \"C:/Users/nicho/OneDrive/Nick Work Laptop/Claude-SME-QA-Bot--master/solutions/case-search/evals/\"*/)"
+    ]
+  }
+}

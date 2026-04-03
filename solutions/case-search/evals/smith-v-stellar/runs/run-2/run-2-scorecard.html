@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Score: Smith v. Stellar - Case Search</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #1a1a1a; max-width: 1100px; margin: 40px auto; padding: 0 32px; background: #fff; }
+  h1 { font-size: 20px; color: #1a1a1a; margin-bottom: 4px; }
+  h2 { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-top: 32px; margin-bottom: 10px; border-bottom: 1px solid #d0d0d0; padding-bottom: 4px; }
+  .meta { color: #555; font-size: 12px; margin-bottom: 20px; }
+  .score-banner { background: #fef2f2; border: 1.5px solid #dc2626; border-radius: 6px; padding: 6px 14px; display: inline-block; margin-bottom: 16px; }
+  .score-banner .score { font-size: 16px; font-weight: 700; color: #dc2626; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 8px; }
+  th { background: #1e3a5f; color: #fff; text-align: left; padding: 7px 10px; font-weight: 600; font-size: 11px; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.5; }
+  tr:nth-child(even) td { background: #f8f9fb; }
+  .footnote { font-size: 11px; color: #666; margin-top: 6px; font-style: italic; }
+  .grade-poor { color: #d97706; font-weight: 600; }
+  .grade-fair { color: #2563eb; font-weight: 600; }
+  .grade-fail { color: #dc2626; font-weight: 600; }
+  .grade-pass { color: #16a34a; font-weight: 600; }
+  .summary-list { list-style: disc; padding-left: 20px; margin: 0; }
+  .summary-list li { margin-bottom: 10px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<h1>QA Score: Case Search - Smith v. Stellar (2026-03-31)</h1>
+
+<div class="score-banner">
+  <div class="score">35 / 100 - FAIL</div>
+</div>
+
+<h2>Run Log</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Step</th><th>Search ID</th><th>Query</th><th>Results Evaluated</th><th>Total Relevant Results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>C1</td><td>Marsh USA Inc. v. Cook</td><td>10</td><td>2</td></tr>
+    <tr><td>2</td><td>C2</td><td>Texas non-compete overbroad industry-wide restriction reformation employer breach</td><td>15</td><td>9</td></tr>
+    <tr><td>3</td><td>C3</td><td>employer materially breached employment agreement by unilaterally reducing compensation then fired employee can non-compete still be enforced Texas</td><td>15</td><td>9</td></tr>
+    <tr><td>4</td><td>C4</td><td>enforceability of overbroad non-compete agreement that restricts work in entire industry rather than just competitors under Texas Business and Commerce Code Section 15.50</td><td>9 *</td><td>2</td></tr>
+    <tr><td>5</td><td>C5</td><td>Texas employee signed 2-year non-compete covering 7 states... (full fact pattern)</td><td>9 *</td><td>2</td></tr>
+    <tr><td>6</td><td>A1</td><td>Tex. Bus. &amp; Com. Code § 15.50</td><td>1</td><td>1</td></tr>
+    <tr><td>7</td><td>A2</td><td>Texas covenants not to compete act</td><td>15</td><td>2</td></tr>
+  </tbody>
+</table>
+<p class="footnote">* C4 and C5 each returned 15 results, but 6 had no reporter citation listed and were excluded from scoring (Aerotek, J.M. Davidson, Household Bank, Twin City Fire, Tastee Donuts, Olander v. Compass Bank). Only the remaining 9 cited results were evaluated.</p>
+
+<h2>Per-Search Breakdown</h2>
+<p style="font-size:12px; color:#444; margin-bottom:10px;">
+  Each search is scored independently out of <strong>100 points</strong> across 5 categories. The combined score at the top is the average of all 7 search totals. Category maximums are shown in the column headers. For case searches (C1-C5), the number of golden-eval cases found is shown alongside the points earned. Authorities searches (A1-A2) are not scored on Tier 1/2/3.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th>Relevance<br><span style="font-weight:400;font-size:10px;">max 30 pts</span></th>
+      <th>Tier 1 Cases<br><span style="font-weight:400;font-size:10px;">max 30 pts</span></th>
+      <th>Tier 2 Cases<br><span style="font-weight:400;font-size:10px;">max 20 pts</span></th>
+      <th>Tier 3 / Bonus<br><span style="font-weight:400;font-size:10px;">max 10 pts</span></th>
+      <th>Result Quality<br><span style="font-weight:400;font-size:10px;">max 10 pts</span></th>
+      <th>Score<br><span style="font-weight:400;font-size:10px;">out of 100</span></th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>C1</td><td>10 / 30</td><td>7.5 / 30 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>0 / 20 &nbsp;<span style="color:#555;font-size:11px;">(0 found)</span></td><td>2 / 10 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>10 / 10</td><td><strong>29.5</strong></td><td><span class="grade-poor">Poor</span></td></tr>
+    <tr><td>C2</td><td>25 / 30</td><td>7.5 / 30 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>4 / 20 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>10 / 10 &nbsp;<span style="color:#555;font-size:11px;">(5+ found)</span></td><td>10 / 10</td><td><strong>56.5</strong></td><td><span class="grade-fair">Fair</span></td></tr>
+    <tr><td>C3</td><td>25 / 30</td><td>7.5 / 30 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>4 / 20 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>10 / 10 &nbsp;<span style="color:#555;font-size:11px;">(5+ found)</span></td><td>10 / 10</td><td><strong>56.5</strong></td><td><span class="grade-fair">Fair</span></td></tr>
+    <tr><td>C4</td><td>10 / 30</td><td>0 / 30 &nbsp;<span style="color:#555;font-size:11px;">(0 found)</span></td><td>4 / 20 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>2 / 10 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>10 / 10</td><td><strong>26</strong></td><td><span class="grade-fail">Fail</span></td></tr>
+    <tr><td>C5</td><td>10 / 30</td><td>0 / 30 &nbsp;<span style="color:#555;font-size:11px;">(0 found)</span></td><td>4 / 20 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>2 / 10 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>10 / 10</td><td><strong>26</strong></td><td><span class="grade-fail">Fail</span></td></tr>
+    <tr><td>A1</td><td>30 / 30</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td>10 / 10</td><td><strong>40</strong></td><td><span class="grade-pass">Pass</span></td></tr>
+    <tr><td>A2</td><td>0 / 30</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td>10 / 10</td><td><strong>10</strong></td><td><span class="grade-fail">Fail</span></td></tr>
+  </tbody>
+</table>
+<p class="footnote">Combined score: (29.5 + 56.5 + 56.5 + 26 + 26 + 40 + 10) / 7 = 35 / 100</p>
+
+<h2>Results Summary</h2>
+<ul class="summary-list">
+  <li><strong>C1 - Case Name Lookup (29.5 / 100 - Poor):</strong> Case name lookup returned Marsh USA Inc. v. Cook as the #1 result as expected, but only 2 of 10 results were relevant. No other Tier 1 or Tier 2 cases appeared. The remaining results were general commercial litigation unrelated to non-competes.</li>
+  <li><strong>C2 - Keyword Stacking (56.5 / 100 - Fair):</strong> Best-performing case search. Keyword stacking surfaced Peat Marwick (Tier 1) and D'Onofrio (Tier 2), plus 5+ bonus cases. 9 of 15 results were relevant. Still missed 5 of 6 Tier 1 cases and 6 of 7 Tier 2 cases.</li>
+  <li><strong>C3 - Narrow Single Issue (56.5 / 100 - Fair):</strong> Returned identical results to C2. The engine did not differentiate the narrow employer-breach query from keyword stacking. Score and findings are the same as C2.</li>
+  <li><strong>C4 - Focused Legal Question (26 / 100 - Fail):</strong> Despite explicitly referencing Section 15.50, the search returned mostly breach of contract, arbitration, and venue cases. Only 2 of 9 valid results were relevant. Guy Carpenter (Tier 2) was the only golden-eval case found. 6 results had no citation and were excluded, including Olander v. Compass Bank (Tier 1).</li>
+  <li><strong>C5 - Full Fact Pattern (26 / 100 - Fail):</strong> Returned the exact same 15-result set as C4. The full fact pattern narrative did not improve retrieval over the focused legal question. Confirms the engine does not process semantic/NLP-style queries differently from keyword queries at this length.</li>
+  <li><strong>A1 - Exact Citation (40 / 40 - Pass):</strong> Exact citation lookup returned Section 15.50 correctly as the only result. Full text was available. This search type has a max score of 40 since Tier 1/2/3 scoring does not apply to authorities.</li>
+  <li><strong>A2 - Descriptive Query (10 / 40 - Fail):</strong> Descriptive statute query returned 15 results, but 13 were unrelated Texas administrative code sections and federal regulations. Only Sections 15.50 and 15.51 appeared; Section 15.52 was absent. The jurisdiction filter (Federal + TX) was applied but did not meaningfully improve relevance.</li>
+</ul>
+
+</body>
+</html>

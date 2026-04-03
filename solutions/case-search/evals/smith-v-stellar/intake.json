@@ -1,0 +1,53 @@
+{
+  "query_name": "Smith v. Stellar",
+  "jurisdiction": "Texas",
+  "solution": "case-search",
+  "searches": {
+    "cases": [
+      {
+        "id": "C1-case-name-lookup",
+        "label": "Case Name Lookup",
+        "mode": "cases",
+        "query": "Marsh USA Inc. v. Cook"
+      },
+      {
+        "id": "C2-keyword-stacking",
+        "label": "Keyword Stacking",
+        "mode": "cases",
+        "query": "Texas non-compete overbroad industry-wide restriction reformation employer breach"
+      },
+      {
+        "id": "C3-narrow-single-issue",
+        "label": "Narrow Single Issue (Employer Breach)",
+        "mode": "cases",
+        "query": "employer materially breached employment agreement by unilaterally reducing compensation then fired employee can non-compete still be enforced Texas"
+      },
+      {
+        "id": "C4-focused-legal-question",
+        "label": "Focused Legal Question",
+        "mode": "cases",
+        "query": "enforceability of overbroad non-compete agreement that restricts work in entire industry rather than just competitors under Texas Business and Commerce Code Section 15.50"
+      },
+      {
+        "id": "C5-full-fact-pattern",
+        "label": "Full Fact Pattern (Semantic/NLP)",
+        "mode": "cases",
+        "query": "Texas employee signed 2-year non-compete covering 7 states with company. Employee was top salesman paid mostly commissions. Employer tried to force employee into salaried-only role at half pay. Employee refused, was fired for insubordination. Employee started new business in same industry but selling non-competitive product. Employer suing to enforce non-compete and seeking injunction plus damages. Non-compete defines competitors so broadly it covers entire industry not just actual competitors."
+      }
+    ],
+    "authorities": [
+      {
+        "id": "A1-exact-citation",
+        "label": "Exact Statute Citation",
+        "mode": "authorities",
+        "query": "Tex. Bus. & Com. Code § 15.50"
+      },
+      {
+        "id": "A2-descriptive",
+        "label": "Descriptive Statute Query",
+        "mode": "authorities",
+        "query": "Texas covenants not to compete act"
+      }
+    ]
+  }
+}

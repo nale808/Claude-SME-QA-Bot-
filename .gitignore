@@ -1,0 +1,5 @@
+config/credentials.json
+reports/
+*.tmp
+.DS_Store
+Thumbs.db

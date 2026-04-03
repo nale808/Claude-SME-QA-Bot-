@@ -1,0 +1,6 @@
+# Fact Pattern
+#
+# Paste the full fact pattern here. Keep it under 1,000 words.
+# Include all parties, key facts, and the legal dispute.
+# Include the jurisdiction and any relevant contract/agreement details.
+# Remove any privileged or confidential information not needed for search testing.

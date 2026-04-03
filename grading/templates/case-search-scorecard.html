@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Score: Case Search - {{QUERY_NAME}}</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #1a1a1a; max-width: 1100px; margin: 40px auto; padding: 0 32px; background: #fff; }
+  h1 { font-size: 20px; color: #1a1a1a; margin-bottom: 4px; }
+  h2 { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-top: 32px; margin-bottom: 10px; border-bottom: 1px solid #d0d0d0; padding-bottom: 4px; }
+  .score-banner { background: #fef2f2; border: 1.5px solid #dc2626; border-radius: 6px; padding: 6px 14px; display: inline-block; margin-bottom: 16px; }
+  .score-banner .score { font-size: 16px; font-weight: 700; color: #dc2626; }
+  .score-banner.pass { background: #f0fdf4; border-color: #16a34a; }
+  .score-banner.pass .score { color: #16a34a; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 8px; }
+  th { background: #1e3a5f; color: #fff; text-align: left; padding: 7px 10px; font-weight: 600; font-size: 11px; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.5; }
+  tr:nth-child(even) td { background: #f8f9fb; }
+  .footnote { font-size: 11px; color: #666; margin-top: 6px; font-style: italic; }
+  .grade-poor { color: #d97706; font-weight: 600; }
+  .grade-fair { color: #2563eb; font-weight: 600; }
+  .grade-fail { color: #dc2626; font-weight: 600; }
+  .grade-pass { color: #16a34a; font-weight: 600; }
+  .summary-list { list-style: disc; padding-left: 20px; margin: 0; }
+  .summary-list li { margin-bottom: 10px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<!-- Title: "QA Score: Case Search - [Query Name] ([Date])" -->
+<h1>QA Score: Case Search - {{QUERY_NAME}} ({{DATE}})</h1>
+
+<!-- Score banner: use class="score-banner pass" if combined score >= 70, else default (red) -->
+<div class="score-banner">
+  <div class="score">{{COMBINED_SCORE}} / 100 - {{PASS_FAIL}}</div>
+</div>
+
+<h2>Run Log</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Step</th><th>Search ID</th><th>Query</th><th>Results Evaluated</th><th>Total Relevant Results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- One row per search. Add * to Results Evaluated if any results were excluded for no citation. -->
+    <tr><td>1</td><td>C1</td><td>{{C1_QUERY}}</td><td>{{C1_EVALUATED}}</td><td>{{C1_RELEVANT}}</td></tr>
+    <tr><td>2</td><td>C2</td><td>{{C2_QUERY}}</td><td>{{C2_EVALUATED}}</td><td>{{C2_RELEVANT}}</td></tr>
+    <tr><td>3</td><td>C3</td><td>{{C3_QUERY}}</td><td>{{C3_EVALUATED}}</td><td>{{C3_RELEVANT}}</td></tr>
+    <tr><td>4</td><td>C4</td><td>{{C4_QUERY}}</td><td>{{C4_EVALUATED}}</td><td>{{C4_RELEVANT}}</td></tr>
+    <tr><td>5</td><td>C5</td><td>{{C5_QUERY}}</td><td>{{C5_EVALUATED}}</td><td>{{C5_RELEVANT}}</td></tr>
+    <tr><td>6</td><td>A1</td><td>{{A1_QUERY}}</td><td>{{A1_EVALUATED}}</td><td>{{A1_RELEVANT}}</td></tr>
+    <tr><td>7</td><td>A2</td><td>{{A2_QUERY}}</td><td>{{A2_EVALUATED}}</td><td>{{A2_RELEVANT}}</td></tr>
+  </tbody>
+</table>
+<!-- Only include footnote if any results were excluded. Remove if not applicable. -->
+<p class="footnote">* {{EXCLUSION_NOTE}}</p>
+
+<h2>Per-Search Breakdown</h2>
+<p style="font-size:12px; color:#444; margin-bottom:10px;">
+  Each search is scored independently out of <strong>100 points</strong> across 5 categories. The combined score at the top is the average of all 7 search totals. Category maximums are shown in the column headers. For case searches (C1-C5), the number of golden-eval cases found is shown alongside the points earned. Authorities searches (A1-A2) are not scored on Tier 1/2/3.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th>Relevance<br><span style="font-weight:400;font-size:10px;">max 30 pts</span></th>
+      <th>Tier 1 Cases<br><span style="font-weight:400;font-size:10px;">max 30 pts</span></th>
+      <th>Tier 2 Cases<br><span style="font-weight:400;font-size:10px;">max 20 pts</span></th>
+      <th>Tier 3 / Bonus<br><span style="font-weight:400;font-size:10px;">max 10 pts</span></th>
+      <th>Result Quality<br><span style="font-weight:400;font-size:10px;">max 10 pts</span></th>
+      <th>Score<br><span style="font-weight:400;font-size:10px;">out of 100</span></th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Grade classes: grade-pass, grade-fair, grade-poor, grade-fail -->
+    <!-- Tier columns for A1/A2: <td style="color:#aaa;">-</td> -->
+    <tr><td>C1</td><td>{{C1_REL}}</td><td>{{C1_T1}} &nbsp;<span style="color:#555;font-size:11px;">({{C1_T1_COUNT}} found)</span></td><td>{{C1_T2}} &nbsp;<span style="color:#555;font-size:11px;">({{C1_T2_COUNT}} found)</span></td><td>{{C1_T3}} &nbsp;<span style="color:#555;font-size:11px;">({{C1_T3_COUNT}} found)</span></td><td>{{C1_Q}}</td><td><strong>{{C1_TOTAL}}</strong></td><td><span class="{{C1_GRADE_CLASS}}">{{C1_GRADE}}</span></td></tr>
+    <tr><td>C2</td><td>{{C2_REL}}</td><td>{{C2_T1}} &nbsp;<span style="color:#555;font-size:11px;">({{C2_T1_COUNT}} found)</span></td><td>{{C2_T2}} &nbsp;<span style="color:#555;font-size:11px;">({{C2_T2_COUNT}} found)</span></td><td>{{C2_T3}} &nbsp;<span style="color:#555;font-size:11px;">({{C2_T3_COUNT}} found)</span></td><td>{{C2_Q}}</td><td><strong>{{C2_TOTAL}}</strong></td><td><span class="{{C2_GRADE_CLASS}}">{{C2_GRADE}}</span></td></tr>
+    <tr><td>C3</td><td>{{C3_REL}}</td><td>{{C3_T1}} &nbsp;<span style="color:#555;font-size:11px;">({{C3_T1_COUNT}} found)</span></td><td>{{C3_T2}} &nbsp;<span style="color:#555;font-size:11px;">({{C3_T2_COUNT}} found)</span></td><td>{{C3_T3}} &nbsp;<span style="color:#555;font-size:11px;">({{C3_T3_COUNT}} found)</span></td><td>{{C3_Q}}</td><td><strong>{{C3_TOTAL}}</strong></td><td><span class="{{C3_GRADE_CLASS}}">{{C3_GRADE}}</span></td></tr>
+    <tr><td>C4</td><td>{{C4_REL}}</td><td>{{C4_T1}} &nbsp;<span style="color:#555;font-size:11px;">({{C4_T1_COUNT}} found)</span></td><td>{{C4_T2}} &nbsp;<span style="color:#555;font-size:11px;">({{C4_T2_COUNT}} found)</span></td><td>{{C4_T3}} &nbsp;<span style="color:#555;font-size:11px;">({{C4_T3_COUNT}} found)</span></td><td>{{C4_Q}}</td><td><strong>{{C4_TOTAL}}</strong></td><td><span class="{{C4_GRADE_CLASS}}">{{C4_GRADE}}</span></td></tr>
+    <tr><td>C5</td><td>{{C5_REL}}</td><td>{{C5_T1}} &nbsp;<span style="color:#555;font-size:11px;">({{C5_T1_COUNT}} found)</span></td><td>{{C5_T2}} &nbsp;<span style="color:#555;font-size:11px;">({{C5_T2_COUNT}} found)</span></td><td>{{C5_T3}} &nbsp;<span style="color:#555;font-size:11px;">({{C5_T3_COUNT}} found)</span></td><td>{{C5_Q}}</td><td><strong>{{C5_TOTAL}}</strong></td><td><span class="{{C5_GRADE_CLASS}}">{{C5_GRADE}}</span></td></tr>
+    <tr><td>A1</td><td>{{A1_REL}}</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td>{{A1_Q}}</td><td><strong>{{A1_TOTAL}}</strong></td><td><span class="{{A1_GRADE_CLASS}}">{{A1_GRADE}}</span></td></tr>
+    <tr><td>A2</td><td>{{A2_REL}}</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td>{{A2_Q}}</td><td><strong>{{A2_TOTAL}}</strong></td><td><span class="{{A2_GRADE_CLASS}}">{{A2_GRADE}}</span></td></tr>
+  </tbody>
+</table>
+<p class="footnote">Combined score: ({{SCORE_FORMULA}}) / 7 = {{COMBINED_SCORE}} / 100</p>
+
+<h2>Results Summary</h2>
+<!-- One bullet per search. Format: [Search ID] - [Label] ([Score] / [Max] - [Grade]): [1-2 sentence explanation of what happened and why the score is what it is.] -->
+<ul class="summary-list">
+  <li><strong>C1 - Case Name Lookup ({{C1_TOTAL}} / 100 - {{C1_GRADE}}):</strong> {{C1_SUMMARY}}</li>
+  <li><strong>C2 - Keyword Stacking ({{C2_TOTAL}} / 100 - {{C2_GRADE}}):</strong> {{C2_SUMMARY}}</li>
+  <li><strong>C3 - Narrow Single Issue ({{C3_TOTAL}} / 100 - {{C3_GRADE}}):</strong> {{C3_SUMMARY}}</li>
+  <li><strong>C4 - Focused Legal Question ({{C4_TOTAL}} / 100 - {{C4_GRADE}}):</strong> {{C4_SUMMARY}}</li>
+  <li><strong>C5 - Full Fact Pattern ({{C5_TOTAL}} / 100 - {{C5_GRADE}}):</strong> {{C5_SUMMARY}}</li>
+  <li><strong>A1 - Exact Citation ({{A1_TOTAL}} / 40 - {{A1_GRADE}}):</strong> {{A1_SUMMARY}}</li>
+  <li><strong>A2 - Descriptive Query ({{A2_TOTAL}} / 40 - {{A2_GRADE}}):</strong> {{A2_SUMMARY}}</li>
+</ul>
+
+</body>
+</html>

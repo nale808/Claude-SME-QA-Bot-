@@ -1,0 +1,61 @@
+{
+  "_instructions": "Copy this file and fill in the fields below. Each search variation needs a unique ID, descriptive label, mode (cases or authorities), and the exact query text to enter into the search box. Minimum 5 searches, recommended 7.",
+  "query_name": "[Case Name, e.g., Doe v. Acme]",
+  "jurisdiction": "[State, e.g., Texas]",
+  "solution": "case-search",
+  "searches": {
+    "cases": [
+      {
+        "_note": "REQUIRED: Search for a known landmark case by name",
+        "id": "C1-case-name-lookup",
+        "label": "Case Name Lookup",
+        "mode": "cases",
+        "query": "[e.g., Marsh USA Inc. v. Cook]"
+      },
+      {
+        "_note": "REQUIRED: Key legal terms separated by spaces",
+        "id": "C2-keyword-stacking",
+        "label": "Keyword Stacking",
+        "mode": "cases",
+        "query": "[e.g., Texas non-compete overbroad reformation employer breach]"
+      },
+      {
+        "_note": "REQUIRED: A narrow query targeting one specific legal argument",
+        "id": "C3-narrow-single-issue",
+        "label": "Narrow Single Issue",
+        "mode": "cases",
+        "query": "[e.g., employer materially breached employment agreement can non-compete still be enforced]"
+      },
+      {
+        "_note": "REQUIRED: A single legal issue framed as a precise question",
+        "id": "C4-focused-legal-question",
+        "label": "Focused Legal Question",
+        "mode": "cases",
+        "query": "[e.g., enforceability of overbroad non-compete under Texas Business and Commerce Code Section 15.50]"
+      },
+      {
+        "_note": "REQUIRED: Full fact pattern pasted as a semantic/NLP query",
+        "id": "C5-full-fact-pattern",
+        "label": "Full Fact Pattern (Semantic/NLP)",
+        "mode": "cases",
+        "query": "[Paste a condensed version of the full fact pattern here]"
+      }
+    ],
+    "authorities": [
+      {
+        "_note": "RECOMMENDED: Exact statute citation in standard format",
+        "id": "A1-exact-citation",
+        "label": "Exact Statute Citation",
+        "mode": "authorities",
+        "query": "[e.g., Tex. Bus. & Com. Code § 15.50]"
+      },
+      {
+        "_note": "RECOMMENDED: Natural language description of the statute",
+        "id": "A2-descriptive",
+        "label": "Descriptive Statute Query",
+        "mode": "authorities",
+        "query": "[e.g., Texas covenants not to compete act]"
+      }
+    ]
+  }
+}

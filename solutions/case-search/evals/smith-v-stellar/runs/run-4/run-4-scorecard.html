@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QA Score: Case Search - Smith v. Stellar</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; color: #1a1a1a; max-width: 1100px; margin: 40px auto; padding: 0 32px; background: #fff; }
+  h1 { font-size: 20px; color: #1a1a1a; margin-bottom: 4px; }
+  h2 { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-top: 32px; margin-bottom: 10px; border-bottom: 1px solid #d0d0d0; padding-bottom: 4px; }
+  .score-banner { background: #fef2f2; border: 1.5px solid #dc2626; border-radius: 6px; padding: 6px 14px; display: inline-block; margin-bottom: 16px; }
+  .score-banner .score { font-size: 16px; font-weight: 700; color: #dc2626; }
+  .score-banner.pass { background: #f0fdf4; border-color: #16a34a; }
+  .score-banner.pass .score { color: #16a34a; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 8px; }
+  th { background: #1e3a5f; color: #fff; text-align: left; padding: 7px 10px; font-weight: 600; font-size: 11px; }
+  td { padding: 7px 10px; border-bottom: 1px solid #e5e7eb; vertical-align: top; line-height: 1.5; }
+  tr:nth-child(even) td { background: #f8f9fb; }
+  .footnote { font-size: 11px; color: #666; margin-top: 6px; font-style: italic; }
+  .grade-poor { color: #d97706; font-weight: 600; }
+  .grade-fair { color: #2563eb; font-weight: 600; }
+  .grade-fail { color: #dc2626; font-weight: 600; }
+  .grade-pass { color: #16a34a; font-weight: 600; }
+  .summary-list { list-style: disc; padding-left: 20px; margin: 0; }
+  .summary-list li { margin-bottom: 10px; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<h1>QA Score: Case Search - Smith v. Stellar (2026-04-01)</h1>
+
+<div class="score-banner">
+  <div class="score">41 / 100 - FAIL</div>
+</div>
+
+<h2>Run Log</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Step</th><th>Search ID</th><th>Query</th><th>Results Evaluated</th><th>Total Relevant Results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>C1</td><td>Marsh USA Inc. v. Cook</td><td>10</td><td>2</td></tr>
+    <tr><td>2</td><td>C2</td><td>Texas non-compete overbroad industry-wide restriction reformation employer breach</td><td>15</td><td>9</td></tr>
+    <tr><td>3</td><td>C3</td><td>employer materially breached employment agreement by unilaterally reducing compensation then fired employee can non-compete still be enforced Texas</td><td>15</td><td>9</td></tr>
+    <tr><td>4</td><td>C4</td><td>enforceability of overbroad non-compete agreement that restricts work in entire industry rather than just competitors under Texas Business and Commerce Code Section 15.50</td><td>12*</td><td>1</td></tr>
+    <tr><td>5</td><td>C5</td><td>Texas employee signed 2-year non-compete covering 7 states with company...</td><td>14*</td><td>14</td></tr>
+    <tr><td>6</td><td>A1</td><td>Tex. Bus. &amp; Com. Code &sect; 15.50</td><td>1</td><td>1</td></tr>
+    <tr><td>7</td><td>A2</td><td>Texas covenants not to compete act</td><td>15</td><td>0</td></tr>
+  </tbody>
+</table>
+<p class="footnote">* C4: 3 results excluded (no citation). C5: 1 result excluded (no citation).</p>
+
+<h2>Per-Search Breakdown</h2>
+<p style="font-size:12px; color:#444; margin-bottom:10px;">
+  Each search is scored independently out of <strong>100 points</strong> across 5 categories. The combined score at the top is the average of all 7 search totals. Category maximums are shown in the column headers. For case searches (C1-C5), the number of golden-eval cases found is shown alongside the points earned. Authorities searches (A1-A2) are not scored on Tier 1/2/3.
+</p>
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th>Relevance<br><span style="font-weight:400;font-size:10px;">max 30 pts</span></th>
+      <th>Tier 1 Cases<br><span style="font-weight:400;font-size:10px;">max 30 pts</span></th>
+      <th>Tier 2 Cases<br><span style="font-weight:400;font-size:10px;">max 20 pts</span></th>
+      <th>Tier 3 / Bonus<br><span style="font-weight:400;font-size:10px;">max 10 pts</span></th>
+      <th>Result Quality<br><span style="font-weight:400;font-size:10px;">max 10 pts</span></th>
+      <th>Score<br><span style="font-weight:400;font-size:10px;">out of 100</span></th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>C1</td><td>10</td><td>7.5 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>0 &nbsp;<span style="color:#555;font-size:11px;">(0 found)</span></td><td>2 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>8</td><td><strong>28</strong></td><td><span class="grade-poor">Poor</span></td></tr>
+    <tr><td>C2</td><td>25</td><td>7.5 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>20 &nbsp;<span style="color:#555;font-size:11px;">(5 found)</span></td><td>6 &nbsp;<span style="color:#555;font-size:11px;">(3 found)</span></td><td>10</td><td><strong>69</strong></td><td><span class="grade-pass">Good</span></td></tr>
+    <tr><td>C3</td><td>25</td><td>7.5 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>20 &nbsp;<span style="color:#555;font-size:11px;">(5 found)</span></td><td>6 &nbsp;<span style="color:#555;font-size:11px;">(3 found)</span></td><td>10</td><td><strong>69</strong></td><td><span class="grade-pass">Good</span></td></tr>
+    <tr><td>C4</td><td>0</td><td>0 &nbsp;<span style="color:#555;font-size:11px;">(0 found)</span></td><td>4 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>0 &nbsp;<span style="color:#555;font-size:11px;">(0 found)</span></td><td>10</td><td><strong>14</strong></td><td><span class="grade-fail">Fail</span></td></tr>
+    <tr><td>C5</td><td>30</td><td>22.5 &nbsp;<span style="color:#555;font-size:11px;">(3 found)</span></td><td>0 &nbsp;<span style="color:#555;font-size:11px;">(0 found)</span></td><td>2 &nbsp;<span style="color:#555;font-size:11px;">(1 found)</span></td><td>10</td><td><strong>65</strong></td><td><span class="grade-pass">Good</span></td></tr>
+    <tr><td>A1</td><td>30</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td>10</td><td><strong>40</strong></td><td><span class="grade-pass">Pass</span></td></tr>
+    <tr><td>A2</td><td>0</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td style="color:#aaa;">-</td><td>0</td><td><strong>0</strong></td><td><span class="grade-fail">Fail</span></td></tr>
+  </tbody>
+</table>
+<p class="footnote">Combined score: (28 + 69 + 69 + 14 + 65 + 40 + 0) / 7 = 41 / 100</p>
+
+<h2>Results Summary</h2>
+<ul class="summary-list">
+  <li><strong>C1 - Case Name Lookup (28 / 100 - Poor):</strong> Marsh USA Inc. v. Cook correctly returned as #1 result (Tier 1) along with the App. Ct. predecessor (Tier 3). However, 8 of 10 results were unrelated "Marsh v." cases with no connection to non-compete law, dragging down relevance.</li>
+  <li><strong>C2 - Keyword Stacking (69 / 100 - Good):</strong> Strong performance with 9/15 relevant results. Found Peat Marwick (Tier 1), five Tier 2 cases (John R. Ray, D'Onofrio, Wright, Gomez, U.S. Risk), and three Tier 3 cases (TransPerfect, McKissock, Merritt Hawkins). Six irrelevant results were antitrust/regulatory cases.</li>
+  <li><strong>C3 - Narrow Single Issue (69 / 100 - Good):</strong> Returned identical results to C2 despite a very different query framing. The employer-breach-specific query did not surface any unique cases addressing that sub-issue. Same 9/15 relevant results.</li>
+  <li><strong>C4 - Focused Legal Question (14 / 100 - Fail):</strong> Only 1 relevant case (Juliette Fowler Homes, Tier 2) out of 12 valid results. 3 results had no citation and were excluded. Despite explicitly referencing Section 15.50, the search returned mostly irrelevant Texas contract/settlement cases. No Tier 1 cases found.</li>
+  <li><strong>C5 - Full Fact Pattern (65 / 100 - Good):</strong> Best overall performance with 14/14 valid results relevant to non-compete law. Found 3 Tier 1 cases (Olander, DeSantis, Sheshunoff) and 1 Tier 3 case (Premier Industrial). Also surfaced 10 new potentially relevant cases not in the golden evaluation. No Tier 2 cases appeared despite strong relevance.</li>
+  <li><strong>A1 - Exact Citation (40 / 40 - Pass):</strong> Correctly returned Tex. Bus. &amp; Com. Code &sect; 15.50 as the sole result. Full text available via OpenLaws. Expected behavior per golden evaluation.</li>
+  <li><strong>A2 - Descriptive Query (0 / 40 - Fail):</strong> Critical failure. Returned 15 irrelevant federal regulations (CFR sections on tax, ADA, FAR clauses). None of the expected Texas statutes (&sect;&sect; 15.50, 15.51, 15.52) appeared. The "Federal" jurisdiction filter may have been active, but the search engine failed to map the descriptive query to Texas state law.</li>
+</ul>
+
+<h2>Deviations from Golden Evaluation</h2>
+<ul class="summary-list">
+  <li>C2 and C3 returned identical result sets despite different query types (keyword stacking vs. narrow single-issue). The search engine does not appear to differentiate between these query strategies.</li>
+  <li>C4 dramatically underperformed compared to C2/C3, returning mostly irrelevant results despite a precise legal question referencing Section 15.50 directly.</li>
+  <li>C5 (full fact pattern) outperformed C4 (focused legal question), reversing the expected assumption from Run 1 that C4 would outperform C5. C5 found 3 Tier 1 cases vs. C4 finding 0.</li>
+  <li>Marsh USA Inc. v. Cook citation displayed as "33 I.E.R. Cas. (BNA) 999 (2011)" rather than the standard "354 S.W.3d 764 (Tex. 2011)" from the golden evaluation. Both are valid reporters for the same case.</li>
+  <li>A2 returned exclusively federal regulations despite a Texas-specific query. The Authorities search appears to default to federal jurisdiction and does not effectively map descriptive queries to state statutes.</li>
+  <li>Alex Sheshunoff v. Johnson appeared in C5 without a citation on one instance (excluded) and with "50 Tex. Sup. Ct. J. 44 (2006)" on the other. The golden evaluation cites "209 S.W.3d 644 (Tex. 2006)" for this case.</li>
+</ul>
+
+<h2>New Elements Not in Golden Evaluation</h2>
+<table>
+  <thead>
+    <tr><th>Case Name</th><th>Citation</th><th>CourtListener Link</th><th>Surfaced By</th><th>Suggested Tier</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Donald Calhoun v. Jack Doheny Companies, Inc.</td><td>969 F.3d 232 (2020)</td><td><a href="https://www.courtlistener.com/?q=969+F.3d+232&type=o">Link</a></td><td>C5</td><td>Tier 2 (TX non-compete reformation at preliminary injunction stage)</td></tr>
+    <tr><td>Zoecon Industries v. American Stockman Tag Co.</td><td>713 F.2d 1174 (1983)</td><td><a href="https://www.courtlistener.com/?q=713+F.2d+1174&type=o">Link</a></td><td>C5</td><td>Tier 3 (trade secret / non-compete, 5th Circuit)</td></tr>
+    <tr><td>Team Environmental Services v. Addison</td><td>2 F.3d 124 (1993)</td><td><a href="https://www.courtlistener.com/?q=2+F.3d+124&type=o">Link</a></td><td>C5</td><td>Tier 3 (overbroad non-compete, Louisiana law, 5th Circuit)</td></tr>
+    <tr><td>Bergman v. Norris of Houston</td><td>734 S.W.2d 673 (1987)</td><td><a href="https://www.courtlistener.com/?q=734+S.W.2d+673&type=o">Link</a></td><td>C5</td><td>Tier 2 (TX Supreme Court, non-compete unenforceable, common calling)</td></tr>
+    <tr><td>Weatherford Oil Tool Co. v. Campbell</td><td>161 Tex. 310 (1960)</td><td><a href="https://www.courtlistener.com/?q=161+Tex.+310&type=o">Link</a></td><td>C5</td><td>Tier 2 (TX Supreme Court, unreasonable non-compete, no territorial limit)</td></tr>
+    <tr><td>H &amp; R Block v. McCaslin</td><td>541 F.2d 1098 (1976)</td><td><a href="https://www.courtlistener.com/?q=541+F.2d+1098&type=o">Link</a></td><td>C5</td><td>Tier 3 (covenant void, unreasonable, 5th Circuit)</td></tr>
+    <tr><td>Travel Masters v. Star Tours</td><td>827 S.W.2d 830 (1992)</td><td><a href="https://www.courtlistener.com/?q=827+S.W.2d+830&type=o">Link</a></td><td>C5</td><td>Tier 2 (TX Supreme Court, non-compete unenforceable, at-will employment)</td></tr>
+    <tr><td>Perry Kaye v. Orkin Exterminating</td><td>472 F.2d 1213 (1973)</td><td><a href="https://www.courtlistener.com/?q=472+F.2d+1213&type=o">Link</a></td><td>C5</td><td>Tier 3 (20-year non-compete unreasonable, 5th Circuit)</td></tr>
+    <tr><td>Merrill Lynch v. Stidham</td><td>658 F.2d 1098 (1981)</td><td><a href="https://www.courtlistener.com/?q=658+F.2d+1098&type=o">Link</a></td><td>C5</td><td>Tier 3 (non-compete unenforceable lacking geographic description, 5th Circuit)</td></tr>
+    <tr><td>Lewis v. Krueger, Hutchinson &amp; Overton Clinic</td><td>1954 Tex. LEXIS 548 (1954)</td><td><a href="https://www.courtlistener.com/?q=Lewis+v.+Krueger+Hutchinson&type=o">Link</a></td><td>C5</td><td>Tier 3 (TX Supreme Court, non-compete unlimited in time)</td></tr>
+  </tbody>
+</table>
+
+</body>
+</html>
